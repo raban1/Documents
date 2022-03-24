@@ -1,0 +1,91 @@
+
+#include <iostream>
+
+using namespace std;
+public class BankAccount{
+    public:
+        int balance;
+        int noOfDep;
+        int noW;
+        int aIR;
+        int mSc;
+        
+        
+    BankAccount(balance,aIR){
+        
+    }
+    
+        
+    void makeDeposit(int depAmt,){
+    balance=balance+depAmt;
+    noOfDep=noOfDep+1;
+    
+    }
+    void makeWithdrawl(int withAmt){
+        balance=balance-withAmt;
+        noW=noW-1;
+    }
+
+    void calcInt(int aIR){
+        int mIR=aIR/12;
+        int mI=balance*mIR;
+        int balance=balance+mI;
+    }
+    void monthlyProc(balance,mSc){
+        balance=balance-mSc;
+        calcInt();
+        noOfDep=0;
+        noW=0;
+        mSc=0;
+        
+    }
+    
+    class SavingAccount: public BankAccount{
+        public:
+            string status;
+            if(balance>25){
+                status="active";
+            }
+            else{
+                status="inactive";
+        }
+        
+        void makeDeposit(status){
+            if(status=="inactive"){
+                if(depAmt>25){
+                    status="active"
+                }
+            }
+                void makeDeposit(depAmt);
+        
+            }
+        void makeWithdrawl(status){
+            if(status=="inactive"){
+                cout<<"no withdrawl can be made";
+                
+            }
+            else{
+                void makeWithdrawl(withAmt);
+            }
+            
+        }
+        
+    }
+}
+int main()
+{
+
+    int depAmt;
+    cout<<"Hello World";
+    // cin>>balance;
+    // cin>>noOfDep;
+    // cin>>noW;
+    // cin>>aIR;
+    // cin>>mSc;
+    // cin>>depAmt;
+    cout<<balance;
+    return 0;
+}
+
+
+
